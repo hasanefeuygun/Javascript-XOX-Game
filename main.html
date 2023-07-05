@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>XOX Game</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .main {
+        margin-top: 100px;
+        margin-bottom: 100px;
+        height: 500px;
+        width: 600px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+      }
+      .box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .box1 {
+        border-right: 2px solid black;
+        border-bottom: 2px solid black;
+      }
+      .box2 {
+        border-bottom: 2px solid black;
+        border-right: 2px solid black;
+      }
+      .box3 {
+        border-bottom: 2px solid black;
+      }
+      .box4 {
+        border-bottom: 2px solid black;
+        border-right: 2px solid black;
+      }
+      .box5 {
+        border-bottom: 2px solid black;
+        border-right: 2px solid black;
+      }
+      .box6 {
+        border-bottom: 2px solid black;
+      }
+      .box7 {
+        border-right: 2px solid black;
+      }
+      .box8 {
+        border-right: 2px solid black;
+      }
+      .header {
+        display: flex;
+        height: 100px;
+        background-color: lightseagreen;
+        align-items: center;
+        justify-content: center;
+      }
+      .title {
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 45px;
+      }
+      .XOX-letter {
+        margin-right: 50px;
+      }
+      .title-logo {
+        height: 40px;
+      }
+      .body-part {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: gray;
+      }
+      .pink-design {
+        background-color: lightpink;
+        height: 30px;
+      }
+      .gameOverScreen {
+        background-color: rgba(0, 0, 0, 0.7);
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: none;
+        align-items: center;
+        justify-content: center;
+      }
+      .gameOverModal {
+        background-color: lightseagreen;
+        color: white;
+        width: 300px;
+        height: 150px;
+        display: flex;
+        flex-direction: column;
+      }
+      .gameOverHeader {
+        display: flex;
+        justify-content: center;
+      }
+      .gameOverBody {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 104px;
+      }
+      .gameover-logo {
+        height: 20px;
+        margin: 8px;
+      }
+      .gameOverPinkDesign {
+        background-color: lightpink;
+        height: 10px;
+      }
+      .winner-player {
+        height: 30px;
+        margin-left: 5px;
+        margin-right: 5px;
+      }
+      .button-part {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 10px;
+      }
+      .playAgainBtn {
+        color: white;
+        font-weight: bold;
+        height: 35px;
+        padding: 5px;
+        background-color: darkred;
+        border: 3px solid black;
+        box-shadow: 3px 3px 1px rgba(0, 0, 0, 0.5);
+        border-radius: 10px;
+        transition: margin 0.05s;
+      }
+      .playAgainBtn:active {
+        margin-left: 5px;
+        margin-top: 5px;
+      }
+      button {
+        cursor: pointer;
+      }
+      img {
+        height: 80px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <h1 class="title">
+        <span class="XOX-letter">
+          <img src="/images/Red_X.svg.png" class="title-logo" />
+          <img src="/images/circle-png1.webp" class="title-logo" />
+          <img src="/images/Red_X.svg.png" class="title-logo" /> </span
+        >Game
+      </h1>
+    </div>
+    <div class="pink-design"></div>
+
+    <div class="body-part">
+      <div class="main">
+        <div class="box1 box"></div>
+        <div class="box2 box"></div>
+        <div class="box3 box"></div>
+        <div class="box4 box"></div>
+        <div class="box5 box"></div>
+        <div class="box6 box"></div>
+        <div class="box7 box"></div>
+        <div class="box8 box"></div>
+        <div class="box9 box"></div>
+      </div>
+    </div>
+
+    <div class="gameOverScreen">
+      <div class="gameOverModal">
+        <div class="gameOverHeader">
+          <img src="/images/Red_X.svg.png" class="gameover-logo" />
+          <img src="/images/circle-png1.webp" class="gameover-logo" />
+          <img src="/images/Red_X.svg.png" class="gameover-logo" />
+        </div>
+        <div class="gameOverPinkDesign"></div>
+        <div class="gameOverBody">
+          <div class="gameOverLetter">
+            Player <img src="/images/Red_X.svg.png" class="winner-player" /> has
+            won!
+          </div>
+        </div>
+        <div class="button-part">
+          <button class="playAgainBtn">Play Again!</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="/main.js"></script>
+  </body>
+</html>
